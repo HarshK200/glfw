@@ -31,6 +31,7 @@ project "GLFW"
   filter "system:linux"
     systemversion "latest"
     staticruntime "On"
+    pic "On" -- This tells Premake to add -fPIC (need to link again a .so file)
 
     files {
       "src/x11_init.c",
